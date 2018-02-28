@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  befire_action :set_user, only: [:edit, :update, :show]
   def new
     @user = User.new
   end
